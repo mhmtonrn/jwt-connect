@@ -13,5 +13,3 @@ you should add your pom.xml this repository description
      </repository>
  </repositories>
 ````
-
-
