@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.softengine</groupId>
     <artifactId>jwt-connect</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.7.8</version>
     <name>jwt-connect</name>
     <description>Jwt-Auth-App</description>
 
@@ -87,13 +87,5 @@
         </repository>
     </distributionManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
