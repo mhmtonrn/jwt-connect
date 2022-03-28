@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.softengine.jwttest.config.JwtFilter, com.softengine.jwttest.config.SecurityConfig, com.softengine.jwttest.service.CustomUserDetailsService
