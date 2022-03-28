@@ -10,9 +10,8 @@
     </parent>
     <groupId>com.softengine</groupId>
     <artifactId>jwt-connect</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>jwt-connect</name>
-    <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>11</java.version>
@@ -40,7 +39,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -66,13 +64,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jdbc</artifactId>
         </dependency>
-
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>validation-api</artifactId>
-            <version>1.1.0.Final</version>
-        </dependency>
-
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -83,7 +74,7 @@
         <repository>
             <id>github</id>
             <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/mhmtonrn</url>
+            <url>https://maven.pkg.github.com/mhmtonrn/jwt-connect</url>
         </repository>
     </distributionManagement>
 
