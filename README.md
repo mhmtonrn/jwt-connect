@@ -9,7 +9,7 @@ you should add your pom.xml this repository description
      <repository>
          <id>github</id>
          <name>GitHub mhmtonrn Apache Maven Packages</name>
-         <url>https://github.com/mhmtonrn/jwt-connect/packages</url>
+         <url>https://maven.pkg.github.com/mhmtonrn/jwt-connect</url>
      </repository>
  </repositories>
 ````
