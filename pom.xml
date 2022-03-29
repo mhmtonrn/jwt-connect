@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.softengine</groupId>
     <artifactId>jwt-connect</artifactId>
-    <version>1.0.7.16</version>
+    <version>1.0.7.17</version>
     <name>jwt-connect</name>
     <description>Jwt-Auth-App</description>
 
