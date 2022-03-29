@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.softengine.jwttest.config.AutoConfigure
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.softengine.jwttest.JwtTestApplication
