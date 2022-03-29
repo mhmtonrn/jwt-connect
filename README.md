@@ -39,3 +39,6 @@ if you want to use your database for your security app you can exculede **h2** d
     </exclusions>
 </dependency>
 ````
+
+also you can check implemtation of jwt-connect app 
+https://github.com/mhmtonrn/jwt-connect-impl
