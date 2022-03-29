@@ -24,7 +24,7 @@ also you should add dependency in your pom.xml
 </dependency>
 ````
 
-if you want to use your database for your security app you can exculede **h2** database  from pom.xml
+if you want to use your database for your security app you can exculude **h2** database  from pom.xml
 
 ````xml
 <dependency>
