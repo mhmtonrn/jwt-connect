@@ -7,3 +7,6 @@ spring:
       ddl-auto: create-drop
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+
+  app:
+    version: 1.0.8
