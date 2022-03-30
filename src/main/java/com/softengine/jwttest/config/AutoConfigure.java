@@ -1,11 +1,13 @@
 package com.softengine.jwttest.config;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
-@Configuration
-@ComponentScan("com.softengine.jwttest")
-@ConditionalOnClass
-public class AutoConfigure {
+@Target(ElementType.TYPE)
+@Retention(RetentionPolicy.RUNTIME)
+@Import({ JwtConfig.class })
+public @interface EnableJwt {
 }
