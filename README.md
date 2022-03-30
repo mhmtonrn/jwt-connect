@@ -40,5 +40,20 @@ if you want to use your database for your security app you can exculude **h2** d
 </dependency>
 ````
 
+if you develop spring-boot app you must add **@EnableJWT** annotation 
+
+````
+@SpringBootApplication
+@EnableJWT
+public class JwtConnectImplApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(JwtConnectImplApplication.class, args);
+    }
+
+}
+
+````
+
 also you can check implemtation of jwt-connect app 
 https://github.com/mhmtonrn/jwt-connect-impl
