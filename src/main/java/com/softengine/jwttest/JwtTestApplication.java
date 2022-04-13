@@ -14,8 +14,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Slf4j
 @SpringBootApplication
@@ -28,10 +26,20 @@ public class JwtTestApplication {
     private final PasswordEncoder passwordEncoder;
 
     @PostConstruct
-    public void initUser(){
-        List<User> users = Stream.of( new User(1,"user1",passwordEncoder.encode("user1"),"user1@softengine.com",null),
-                                      new User(2,"user2",passwordEncoder.encode("user2"),"user2@softengine.com",null)
-        ).collect(Collectors.toList());
+    public void initUser() {
+        List<User> users = List.of(User.builder().id(1).userName("user1")
+                .password(passwordEncoder.encode("user1"))
+                .accountNonExpired(Boolean.TRUE)
+                .accountNonLocked(Boolean.TRUE)
+                .credentialsNonExpired(Boolean.TRUE)
+                .enabled(Boolean.TRUE).build(),
+                User.builder().id(2).userName("user2")
+                        .password(passwordEncoder.encode("user2"))
+                        .accountNonExpired(Boolean.TRUE)
+                        .accountNonLocked(Boolean.TRUE)
+                        .credentialsNonExpired(Boolean.TRUE)
+                        .enabled(Boolean.TRUE).build()
+                );
         userRepository.saveAll(users);
 
         Role r1 = new Role();
