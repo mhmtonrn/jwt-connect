@@ -27,19 +27,19 @@ public class JwtTestApplication {
 
     @PostConstruct
     public void initUser() {
-        List<User> users = List.of(User.builder().id(1).userName("user1")
+        User u1 = User.builder().id(1l).userName("user1")
                 .password(passwordEncoder.encode("user1"))
                 .accountNonExpired(Boolean.TRUE)
                 .accountNonLocked(Boolean.TRUE)
                 .credentialsNonExpired(Boolean.TRUE)
-                .enabled(Boolean.TRUE).build(),
-                User.builder().id(2).userName("user2")
-                        .password(passwordEncoder.encode("user2"))
-                        .accountNonExpired(Boolean.TRUE)
-                        .accountNonLocked(Boolean.TRUE)
-                        .credentialsNonExpired(Boolean.TRUE)
-                        .enabled(Boolean.TRUE).build()
-                );
+                .enabled(Boolean.TRUE).build();
+        User u2 = User.builder().id(2l).userName("user2")
+                .password(passwordEncoder.encode("user2"))
+                .accountNonExpired(Boolean.TRUE)
+                .accountNonLocked(Boolean.TRUE)
+                .credentialsNonExpired(Boolean.TRUE)
+                .enabled(Boolean.TRUE).build();
+        List<User> users = List.of(u1,u2);
         userRepository.saveAll(users);
 
         Role r1 = new Role();
@@ -57,17 +57,17 @@ public class JwtTestApplication {
         roleRepository.save(r2);
 
         Privilege p1 = new Privilege();
-        p1.setRoleId(1);
-        p1.setUserId(1);
+        p1.setRole(r1);
+        p1.setUser(u1);
         privilegeRepository.save(p1);
 
         Privilege p2 = new Privilege();
-        p2.setRoleId(2);
-        p2.setUserId(2);
+        p2.setRole(r2);
+        p2.setUser(u2);
         privilegeRepository.save(p2);
         Privilege p3 = new Privilege();
-        p3.setRoleId(2);
-        p3.setUserId(1);
+        p3.setRole(r2);
+        p3.setUser(u1);
         privilegeRepository.save(p3);
 
 

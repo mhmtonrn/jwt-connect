@@ -19,8 +19,6 @@ public class WelcomeController {
     private final JwtUtil jwtUtil;
     private final AuthenticationManager authenticationManager;
 
-
-
     @GetMapping("/test")
     @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<String> testRole() {
