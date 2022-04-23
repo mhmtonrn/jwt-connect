@@ -15,16 +15,19 @@ import java.util.List;
 @Setter
 public class User {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String userName;
     private String password;
     private String email;
+    private String firstName;
+    private String lastName;
+    private String phoneNumber;
     private Boolean enabled;
     private Boolean accountNonExpired;
     private Boolean credentialsNonExpired;
     private Boolean accountNonLocked;
 
-
-    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "user",cascade = CascadeType.PERSIST)
     private List<Privilege> privileges;
 }
