@@ -57,3 +57,32 @@ public class JwtConnectImplApplication {
 
 also you can check implemtation of jwt-connect app 
 https://github.com/mhmtonrn/jwt-connect-impl
+
+jwt-connect allows do user operations
+
+using **/user/register** endpoint can save user
+
+````
+{
+	"userName" :"monar2",
+	"password" : "monar2",
+	"email" : "email@emnail",
+	"firstName" :"mehmet",
+	"lastName" : "onar",
+	"phoneNumber" : "+90545"
+	"enabled" :true,
+	"accountNonExpired" : true,
+	"credentialsNonExpired" :true,
+	"accountNonLocked" :true
+}
+````
+
+ **/user/register** endpoint is not secured. when you save any user user has "USER" privilage
+ 
+also **jwt-connect** has **/user/{username}** this endpoint secured 
+
+````
+GET /user/mehmet
+Host: localhost:8080
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtZWhtZXQiLCJleHAiOjE2NTA3MDE2MTEsImlhdCI6MTY1MDcwMTAxMX0.azAvyZOmbrTZ2XltR4e2I1KQli1JvN5vb_6vycFTjxM
+````
