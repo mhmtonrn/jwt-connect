@@ -3,6 +3,8 @@ package com.softengine.jwttest.util;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +16,12 @@ import java.util.function.Function;
 @Service
 public class JwtUtil {
 
-    private String secret = "02008b30-457a-4d7b-a954-3ff0435e9de5";
+	  private final String secret ;
+	    
+	    public JwtUtil(@Value("${jwt.secret.key}") String secret ) {
+	        super();
+	        this.secret = secret;
+	    }
 
     public String extractUsername(String token) {
         return extractClaim(token, Claims::getSubject);
